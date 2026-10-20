@@ -1,7 +1,7 @@
-# Kenneth Rosales — portfolio
+﻿# Kenneth Rosales — portfolio
 
-Live: https://gamerbrosz833-ops.github.io/kenneth/
+Single-page portfolio (EN/ES, light/dark), deployed on Vercel.
 
-- `index.html` — the whole site (no build step). English by default, Spanish with the EN/ES toggle or `?lang=es`.
-- `assets/` — intro film, poster, share image, favicon.
-- `reel/` — HyperFrames source of the 12-second film. Sound: `python -I tools/score.py`; render: `npx hyperframes render . -o renders/reel.mp4`, then compress to `assets/reel.mp4`.
+- `index.html` — the whole site, no build step. Motion with GSAP + ScrollTrigger (CDN); the page stays fully readable without it and with reduced motion.
+- `assets/` — photo, company logos (`logos/`), tool icons from Simple Icons (`tools/`), contour texture (`topo.svg`), share image.
+- `reel/` — HyperFrames source of an earlier intro film (not used on the current page).
