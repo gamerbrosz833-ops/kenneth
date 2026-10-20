@@ -134,6 +134,42 @@
       filter: drop-shadow(0 0 3px rgba(244,162,87,.8)); animation: twinkle 3.6s ease-in-out infinite; }
     @keyframes twinkle { 0%, 70%, 100% { opacity: 0; transform: scale(.4) rotate(0deg); } 80% { opacity: .95; transform: scale(1) rotate(45deg); } 90% { opacity: .2; transform: scale(.7) rotate(70deg); } }
 
+
+    /* section map: right rail on desktop, floating button + sheet on small screens */
+    .rail { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 90; display: none; }
+    @media (min-width: 1180px) { .rail { display: block; } }
+    .rail ol { list-style: none; margin: 0; padding: 10px 8px; display: flex; flex-direction: column; gap: 4px; border-radius: 999px;
+      background: color-mix(in srgb, var(--card) 70%, transparent); border: 1px solid var(--line); box-shadow: inset 0 1px 0 var(--hi), 0 12px 30px -18px rgba(0,0,0,.6);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .rail a { position: relative; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; text-decoration: none; }
+    .rail a i { width: 7px; height: 7px; border-radius: 50%; background: var(--line-2); transition: background .3s, transform .3s, box-shadow .3s; }
+    .rail a:hover i { background: var(--soft); transform: scale(1.2); }
+    .rail a[aria-current="true"] i { background: var(--acc); transform: scale(1.35); box-shadow: 0 0 0 4px var(--chip), 0 0 12px var(--acc); }
+    .rail a span { position: absolute; right: 32px; top: 50%; transform: translate(6px, -50%); white-space: nowrap; padding: 5px 10px; border-radius: 8px;
+      font: 600 12px "DM Sans"; color: var(--text); background: var(--card); border: 1px solid var(--line-2); box-shadow: 0 8px 20px -12px rgba(0,0,0,.6);
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+    .rail a:hover span, .rail a:focus-visible span { opacity: 1; transform: translate(0, -50%); }
+    .rail a[aria-current="true"] span { opacity: .92; transform: translate(0, -50%); color: var(--acc-2); }
+    .rail.quiet a[aria-current="true"] span { opacity: 0; }
+    .jump { position: fixed; right: 16px; bottom: 16px; z-index: 95; display: block; }
+    @media (min-width: 1180px) { .jump { display: none; } }
+    .jump-btn { display: flex; align-items: center; gap: 8px; height: 46px; padding: 0 16px 0 14px; border-radius: 999px; border: 1px solid var(--line-2);
+      background: color-mix(in srgb, var(--card) 88%, transparent); color: var(--text); font: 600 13px "DM Sans"; cursor: pointer;
+      box-shadow: inset 0 1px 0 var(--hi), 0 14px 30px -14px rgba(0,0,0,.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .3s, transform .3s; }
+    .jump.show .jump-btn { opacity: 1; transform: none; pointer-events: auto; }
+    .jump-btn svg { width: 16px; height: 16px; color: var(--acc); }
+    .jump-btn b { color: var(--acc-2); font-weight: 600; }
+    .jump-sheet { position: absolute; right: 0; bottom: 56px; min-width: 210px; padding: 8px; border-radius: 16px; background: var(--card); border: 1px solid var(--line-2);
+      box-shadow: inset 0 1px 0 var(--hi), 0 24px 50px -20px rgba(0,0,0,.8); opacity: 0; transform: translateY(8px) scale(.98); transform-origin: bottom right;
+      pointer-events: none; transition: opacity .25s, transform .25s; }
+    .jump.open .jump-sheet { opacity: 1; transform: none; pointer-events: auto; }
+    .jump-sheet a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; text-decoration: none; color: var(--soft); font-size: 14.5px; }
+    .jump-sheet a small { font: 600 11px "DM Sans"; color: var(--mute); width: 18px; }
+    .jump-sheet a:hover { background: var(--card-2); color: var(--text); }
+    .jump-sheet a[aria-current="true"] { color: var(--text); background: var(--chip); }
+    .jump-sheet a[aria-current="true"] small { color: var(--acc); }
+
     /* logos: one tile format everywhere */
     .logo { width: 36px; height: 36px; border-radius: 10px; flex: none; display: grid; place-items: center; padding: 6px; background: #f7f4ef; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 1px 2px rgba(0,0,0,.25), inset 0 1px 0 #fff; font: 700 11.5px/1 Sora; letter-spacing: -.02em; color: #3b332b; overflow: hidden; }
     .logo img { width: 100%; height: 100%; object-fit: contain; border-radius: 4px; }
@@ -356,6 +392,30 @@
       </div>
     </div>
   </header>
+
+  <nav class="rail" id="rail" aria-label="Sections"><ol>
+    <li><a href="#top" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.0">Intro</span></a></li>
+    <li><a href="#about" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.1">Who I am</span></a></li>
+    <li><a href="#help" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.2">Where I fit</span></a></li>
+    <li><a href="#experience" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.3">Track record</span></a></li>
+    <li><a href="#work" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.4">Selected work</span></a></li>
+    <li><a href="#building" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.5">On the side</span></a></li>
+    <li><a href="#tools" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.6">Toolbox</span></a></li>
+    <li><a href="#contact" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.7">Contact</span></a></li>
+  </ol></nav>
+  <div class="jump" id="jump">
+    <div class="jump-sheet" id="jumpSheet" role="menu">
+      <a href="#top" role="menuitem" aria-current="false"><small>01</small><span data-i18n="map.0">Intro</span></a>
+      <a href="#about" role="menuitem" aria-current="false"><small>02</small><span data-i18n="map.1">Who I am</span></a>
+      <a href="#help" role="menuitem" aria-current="false"><small>03</small><span data-i18n="map.2">Where I fit</span></a>
+      <a href="#experience" role="menuitem" aria-current="false"><small>04</small><span data-i18n="map.3">Track record</span></a>
+      <a href="#work" role="menuitem" aria-current="false"><small>05</small><span data-i18n="map.4">Selected work</span></a>
+      <a href="#building" role="menuitem" aria-current="false"><small>06</small><span data-i18n="map.5">On the side</span></a>
+      <a href="#tools" role="menuitem" aria-current="false"><small>07</small><span data-i18n="map.6">Toolbox</span></a>
+      <a href="#contact" role="menuitem" aria-current="false"><small>08</small><span data-i18n="map.7">Contact</span></a>
+    </div>
+    <button class="jump-btn" id="jumpBtn" type="button" aria-expanded="false" aria-controls="jumpSheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-i18n="map.btn">Sections</span> <b id="jumpPos">1/8</b></button>
+  </div>
 
   <main id="main">
     <!-- HERO -->
@@ -707,6 +767,7 @@
       "t.cred": "Formación e idiomas", "t.deg": "Ingeniería Industrial", "t.thesis": "Tesis: inteligencia artificial para armonizar datos de ERP en una farmacia nicaragüense.",
       "t.en": "Inglés", "t.enp": "Idioma de trabajo diario con equipos de EE. UU. y socios BPO", "t.es": "Español", "t.esp": "Lengua materna", "t.native": "Nativo",
       "ct.k": "Contacto", "ct.t": "¿Buscas una mano derecha?", "ct.p": "Disponible para roles de Executive Assistant, Chief of Staff y programas: remoto, en Managua o con reubicación.", "ct.copy": "Copiar correo",
+      "map.0": "Inicio", "map.1": "Quién soy", "map.2": "Dónde encajo", "map.3": "Trayectoria", "map.4": "Trabajo seleccionado", "map.5": "En paralelo", "map.6": "Herramientas", "map.7": "Contacto", "map.btn": "Secciones",
       "foot": "Managua, Nicaragua · Referencias disponibles a solicitud"
     };
     var UI = {
@@ -784,6 +845,29 @@
       });
     }
 
+
+
+    /* ---------- section map (rail + jump menu) ---------- */
+    var mapIds = ["top", "about", "help", "experience", "work", "building", "tools", "contact"];
+    var mapSecs = mapIds.map(function (id) { return document.getElementById(id); });
+    var railLinks = [].slice.call(document.querySelectorAll("#rail a")), sheetLinks = [].slice.call(document.querySelectorAll("#jumpSheet a"));
+    var jump = document.getElementById("jump"), jumpBtn = document.getElementById("jumpBtn"), jumpPos = document.getElementById("jumpPos"), rail = document.getElementById("rail");
+    var railQuiet;
+    function markMap() {
+      var cur = 0;
+      mapSecs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * .45) cur = i; });
+      railLinks.concat(sheetLinks).forEach(function (a) { a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + mapIds[cur])); });
+      jumpPos.textContent = (cur + 1) + "/" + mapIds.length;
+      jump.classList.toggle("show", scrollY > innerHeight * .5);
+      // the active label shows while moving, then steps back so it never covers content
+      rail.classList.remove("quiet"); clearTimeout(railQuiet); railQuiet = setTimeout(function () { rail.classList.add("quiet"); }, 1400);
+    }
+    addEventListener("scroll", markMap, { passive: true }); markMap();
+    function closeSheet() { jump.classList.remove("open"); jumpBtn.setAttribute("aria-expanded", "false"); }
+    jumpBtn.addEventListener("click", function (e) { e.stopPropagation(); var o = !jump.classList.contains("open"); jump.classList.toggle("open", o); jumpBtn.setAttribute("aria-expanded", String(o)); if (o) sheetLinks[0].focus(); });
+    sheetLinks.forEach(function (a) { a.addEventListener("click", closeSheet); });
+    document.addEventListener("click", function (e) { if (!jump.contains(e.target)) closeSheet(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && jump.classList.contains("open")) { closeSheet(); jumpBtn.focus(); } });
 
     /* ---------- photo framing toggle ---------- */
     var photo = document.getElementById("photo");
