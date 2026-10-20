@@ -1,0 +1,7 @@
+reel/.hyperframes/
+reel/.thumbnails/
+reel/.waveform-cache/
+reel/.work/
+reel/renders/
+reel/assets/score.wav
+node_modules/
