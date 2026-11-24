@@ -358,6 +358,109 @@
     footer { padding: 34px 0 44px; color: var(--mute); font-size: 13.5px; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
 
+
+    /* content studio */
+    .cr { overflow: clip; }
+    .cr .glow.a { top: -160px; left: -200px; right: auto; }
+    .cr-head { max-width: 780px; }
+    .cr-head p { font-size: 18px; }
+    .cr-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 860px) { .cr-stats { grid-template-columns: repeat(4, 1fr); } }
+    .cr-stats > div { padding: 20px; border-radius: 16px; }
+    .cr-stats b { display: block; font: 800 clamp(30px, 4vw, 42px)/1 Sora; letter-spacing: -.04em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .cr-stats .k { display: block; margin-top: 10px; color: var(--mute); font-size: 13.5px; line-height: 1.45; }
+    .cr-tabs { position: sticky; top: 76px; z-index: 20; display: flex; gap: 6px; flex-wrap: wrap; margin: 26px 0 0; padding: 6px; border-radius: 14px; width: fit-content; max-width: 100%;
+      background: color-mix(in srgb, var(--card) 86%, transparent); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 var(--hi), 0 12px 30px -20px rgba(0,0,0,.6); }
+    .cr-tabs a { display: inline-flex; gap: 8px; align-items: baseline; padding: 8px 13px; border-radius: 10px; text-decoration: none; color: var(--soft); font: 600 14px "DM Sans"; transition: background .2s, color .2s; }
+    .cr-tabs a small { font-size: 11px; color: var(--acc); }
+    .cr-tabs a:hover, .cr-tabs a.on { background: var(--chip); color: var(--text); }
+    .cr-ch { padding-top: clamp(56px, 8vw, 88px); scroll-margin-top: 140px; }
+    .chh { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 28px; max-width: 820px; }
+    .chn { font: 800 44px/1 Sora; color: transparent; -webkit-text-stroke: 1px var(--acc); flex: none; }
+    .chh h3 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; letter-spacing: -.03em; line-height: 1.15; }
+    .chh p { color: var(--soft); margin: 10px 0 0; font-size: 16.5px; }
+    .feat { display: grid; grid-template-columns: 1fr; gap: 28px; padding: 22px; border-radius: 24px; }
+    @media (min-width: 900px) { .feat { grid-template-columns: 300px 1fr; gap: 40px; padding: 32px; } }
+    .phone { position: relative; width: 100%; max-width: 300px; margin: 0 auto; aspect-ratio: 9 / 16; border-radius: 30px; overflow: hidden; background: #000; border: 6px solid #0d0c0b; box-shadow: 0 0 0 1px var(--line-2), 0 30px 60px -30px rgba(0,0,0,.9); align-self: start; }
+    .phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .snd { position: absolute; left: 10px; bottom: 10px; display: inline-flex; gap: 6px; align-items: center; height: 32px; padding: 0 11px; border-radius: 999px; border: 1px solid rgba(255,255,255,.2); background: rgba(10,10,10,.55); color: #fff; font: 600 12px "DM Sans"; cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .snd svg { width: 15px; height: 15px; }
+    .ftx h3 { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.2; font-weight: 700; letter-spacing: -.02em; margin-top: 14px; }
+    .ftx p { color: var(--soft); margin: 12px 0 0; }
+    .ftx .ctas { margin-top: 22px; }
+    .reels-h { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 18px; margin: 40px 0 14px; }
+    .reels-h h4 { margin: 0; font: 700 18px Sora; letter-spacing: -.01em; }
+    .reels-h span { font-size: 13px; color: var(--mute); }
+    .reels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 640px) { .reels { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 960px) { .reels { grid-template-columns: repeat(5, 1fr); } }
+    .reels.more { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 960px) { .reels.more { grid-template-columns: 1fr 1fr 1fr 2.2fr; align-items: start; } }
+    .reel { display: block; padding: 0; text-align: left; border: 0; background: none; color: inherit; cursor: pointer; font: inherit; }
+    .reel .rv { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: var(--card-2); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s, border-color .35s, box-shadow .35s; }
+    .reel.h .rv { aspect-ratio: 16 / 9; }
+    .reel .rv img, .reel .rv video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .reel:hover .rv, .reel:focus-visible .rv { transform: translateY(-3px); border-color: var(--acc); box-shadow: var(--shadow-up); }
+    .reel .pl { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; display: grid; place-items: center; background: rgba(10,10,10,.5); color: #fff; border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: opacity .3s, transform .3s; }
+    .reel .pl svg { width: 20px; height: 20px; margin-left: 3px; }
+    .reel.playing .pl { opacity: 0; transform: scale(.8); }
+    .reel .bd, .reel .du { position: absolute; top: 8px; padding: 3px 8px; border-radius: 999px; font: 600 11px "DM Sans"; color: #fff; background: rgba(10,10,10,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .reel .bd { left: 8px; } .reel .du { right: 8px; }
+    .reel .rt { display: block; padding: 10px 2px 0; }
+    .reel .rt b { display: block; font: 600 14.5px/1.3 Sora; letter-spacing: -.01em; }
+    .reel .rt small { display: block; margin-top: 4px; font-size: 12.5px; line-height: 1.4; color: var(--mute); }
+    .ai-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 640px) { .ai-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .ai-grid { grid-template-columns: repeat(4, 1fr); } }
+    .aic { padding: 20px; border-radius: 16px; }
+    .aic b { display: block; font: 700 15.5px Sora; letter-spacing: -.01em; color: var(--acc-2); }
+    .aic p { margin: 8px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.55; }
+    .filt { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .filt button { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--card); color: var(--soft); font: 600 13px "DM Sans"; cursor: pointer; transition: all .2s; }
+    .filt button[aria-pressed="true"] { background: var(--chip); border-color: var(--chip-line); color: var(--text); }
+    .gal { columns: 2 200px; column-gap: 12px; }
+    @media (min-width: 960px) { .gal { columns: 4; } }
+    .gi { break-inside: avoid; margin: 0 0 12px; }
+    .gi[hidden] { display: none; }
+    .gwide { margin-bottom: 14px; } .gwide .gb { cursor: zoom-in; } .gwide figcaption { font-size: 13.5px; }
+    .gb { display: block; width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; cursor: zoom-in; background: var(--card-2); box-shadow: var(--shadow); transition: transform .35s, border-color .35s; }
+    .gb:hover { transform: translateY(-3px); border-color: var(--acc); }
+    .gb img { width: 100%; height: auto; }
+    .gi figcaption { padding: 7px 2px 0; font-size: 12.5px; line-height: 1.4; color: var(--mute); }
+    .st-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 860px) { .st-grid { grid-template-columns: 1.4fr 1fr 1fr; } .stm { grid-row: span 3; } }
+    .stm { padding: 24px; border-radius: 18px; }
+    .stm h4, .cr-cta h3 { margin: 0; font: 700 18px Sora; }
+    .fun { display: grid; gap: 8px; margin-top: 14px; }
+    .fun div { padding: 12px 14px; border-radius: 12px; background: var(--card-2); border: 1px solid var(--line); font-size: 14px; color: var(--soft); }
+    .fun div:nth-child(2) { margin-left: 14px; } .fun div:nth-child(3) { margin-left: 28px; border-color: var(--chip-line); }
+    .fun b { display: block; font: 600 11px "DM Sans"; letter-spacing: .1em; text-transform: uppercase; color: var(--acc); margin-bottom: 3px; }
+    .stm p { color: var(--soft); margin: 16px 0 0; font-size: 15px; }
+    .doc { display: block; padding: 18px 20px; border-radius: 16px; text-decoration: none; }
+    .doc .dk { float: right; font: 700 10.5px "DM Sans"; letter-spacing: .1em; padding: 3px 8px; border-radius: 6px; color: var(--acc-2); background: var(--chip); border: 1px solid var(--chip-line); }
+    .doc b { display: block; font: 600 15.5px Sora; letter-spacing: -.01em; }
+    .doc span:last-child { display: block; margin-top: 6px; font-size: 13.5px; color: var(--mute); line-height: 1.5; }
+    .live { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 22px; }
+    .lvk { font: 600 11.5px "DM Sans"; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+    .cr-cta { margin-top: 40px; padding: clamp(28px, 5vw, 44px); border-radius: 24px; background: radial-gradient(60% 90% at 0% 0%, var(--glow), transparent 70%), linear-gradient(180deg, var(--card-hi), var(--card)); }
+    .cr-cta h3 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -.03em; line-height: 1.2; max-width: 26ch; }
+    .cr-cta p { color: var(--soft); margin: 12px 0 0; }
+    .hero .new { display: inline-flex; align-items: center; gap: 10px; margin-left: 8px; padding: 7px 14px 7px 8px; border-radius: 999px; text-decoration: none; font-size: 13.5px; color: var(--text); border: 1px solid var(--chip-line); background: var(--chip); box-shadow: inset 0 1px 0 var(--hi); transition: border-color .2s; vertical-align: middle; }
+    .hero .new:hover { border-color: var(--acc); }
+    .hero .new em { font: 700 10.5px "DM Sans"; letter-spacing: .1em; text-transform: uppercase; font-style: normal; padding: 3px 8px; border-radius: 999px; background: var(--grad); color: var(--on-acc); }
+    @media (max-width: 700px) { .hero .new { margin: 10px 0 0; } }
+    /* viewer */
+    .lb { width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(8,8,7,.92); color: #fff; }
+    .lb::backdrop { background: rgba(0,0,0,.6); }
+    .lb[open] { display: flex; align-items: center; justify-content: center; flex-direction: column; }
+    .lb-m { max-width: min(94vw, 1200px); max-height: 82vh; display: flex; justify-content: center; }
+    .lb-m img, .lb-m video { max-width: 100%; max-height: 82vh; border-radius: 12px; display: block; background: #000; }
+    .lb-c { margin: 14px 20px 0; max-width: 720px; text-align: center; font-size: 14.5px; color: #d6d0c6; }
+    .lb-x, .lb-n { position: absolute; border: 1px solid rgba(255,255,255,.2); background: rgba(30,30,30,.7); color: #fff; border-radius: 50%; width: 46px; height: 46px; font-size: 26px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+    .lb-x { top: 16px; right: 16px; }
+    .lb-n { top: 50%; margin-top: -23px; } .lb-p { left: 14px; } .lb-f { right: 14px; }
+    .lb-n[hidden] { display: none; }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
@@ -384,6 +487,7 @@
         <a href="#help" data-i18n="nav.help">Where I fit</a>
         <a href="#experience" data-i18n="nav.xp">Experience</a>
         <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#creative" data-i18n="nav.cr">Content</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="tools">
@@ -399,6 +503,7 @@
     <li><a href="#help" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.2">Where I fit</span></a></li>
     <li><a href="#experience" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.3">Track record</span></a></li>
     <li><a href="#work" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.4">Selected work</span></a></li>
+    <li><a href="#creative" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.cr">Content studio</span></a></li>
     <li><a href="#building" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.5">On the side</span></a></li>
     <li><a href="#tools" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.6">Toolbox</span></a></li>
     <li><a href="#contact" aria-current="false"><i aria-hidden="true"></i><span data-i18n="map.7">Contact</span></a></li>
@@ -410,11 +515,12 @@
       <a href="#help" role="menuitem" aria-current="false"><small>03</small><span data-i18n="map.2">Where I fit</span></a>
       <a href="#experience" role="menuitem" aria-current="false"><small>04</small><span data-i18n="map.3">Track record</span></a>
       <a href="#work" role="menuitem" aria-current="false"><small>05</small><span data-i18n="map.4">Selected work</span></a>
-      <a href="#building" role="menuitem" aria-current="false"><small>06</small><span data-i18n="map.5">On the side</span></a>
-      <a href="#tools" role="menuitem" aria-current="false"><small>07</small><span data-i18n="map.6">Toolbox</span></a>
-      <a href="#contact" role="menuitem" aria-current="false"><small>08</small><span data-i18n="map.7">Contact</span></a>
+      <a href="#creative" role="menuitem" aria-current="false"><small>06</small><span data-i18n="map.cr">Content studio</span></a>
+      <a href="#building" role="menuitem" aria-current="false"><small>07</small><span data-i18n="map.5">On the side</span></a>
+      <a href="#tools" role="menuitem" aria-current="false"><small>08</small><span data-i18n="map.6">Toolbox</span></a>
+      <a href="#contact" role="menuitem" aria-current="false"><small>09</small><span data-i18n="map.7">Contact</span></a>
     </div>
-    <button class="jump-btn" id="jumpBtn" type="button" aria-expanded="false" aria-controls="jumpSheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-i18n="map.btn">Sections</span> <b id="jumpPos">1/8</b></button>
+    <button class="jump-btn" id="jumpBtn" type="button" aria-expanded="false" aria-controls="jumpSheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-i18n="map.btn">Sections</span> <b id="jumpPos">1/9</b></button>
   </div>
 
   <main id="main">
@@ -422,7 +528,7 @@
     <section class="hero" id="top" aria-labelledby="h1">
       <div class="glow a"></div><div class="glow b"></div>
       <div class="wrap">
-        <span class="status shine slow a-up"><i aria-hidden="true"></i><span data-i18n="hero.status">Open to remote roles · Executive Assistant · Chief of Staff · Program Operations</span></span>
+        <span class="status shine slow a-up"><i aria-hidden="true"></i><span data-i18n="hero.status">Open to remote roles · Executive Assistant · Chief of Staff · Program Operations</span></span><a class="new a-up" href="#creative"><em data-i18n="hero.newk">New</em><span data-i18n="hero.new">Content studio: 17 videos, campaigns and AI production</span> →</a>
         <h1 id="h1" class="split"><span class="l" data-i18n="hero.l1">Programs on track,</span><span class="l grad" data-i18n="hero.l2">leaders a step ahead.</span></h1>
         <p class="sub a-up" data-i18n="hero.sub">I work as the right hand of an executive or a team: I keep <b>projects on schedule</b>, <b>decisions backed by data</b> and <b>day-to-day operations under control</b>. 6+ years across global fintech risk &amp; compliance, legal operations and executive support.</p>
         <div class="pills a-up">
@@ -632,6 +738,222 @@
       </div>
     </section>
 
+    <!-- CONTENT STUDIO -->
+    <section class="sec cr" id="creative" aria-labelledby="h-cr">
+      <div class="glow a"></div>
+      <div class="wrap">
+        <div class="head cr-head">
+          <div class="eyebrow a-up" data-i18n="cr.k">Content studio · 2026</div>
+          <h2 id="h-cr" class="split" data-i18n="cr.t">Ideas, shipped at agency speed.</h2>
+          <p class="a-up" data-i18n="cr.p">Operations taught me to deliver on time, every time. This year I put that discipline behind content: I shape the idea, direct the AI shots, cut the edit, write the caption and hand the client a portal where everything is ready to post. Thirteen videos for one client in seven days, 385K views on our own reels, and a four-meter sponsor wall for a volcano race. This is the work.</p>
+        </div>
+        <div class="cr-stats">
+          <div class="surface a-up"><b><span data-count="17">17</span></b><span class="k" data-i18n="cr.s1">videos produced, from concept to final cut</span></div>
+          <div class="surface a-up"><b><span data-count="385">385</span>K+</b><span class="k" data-i18n="cr.s2">views on 12 Xolo Run reels in five weeks</span></div>
+          <div class="surface a-up"><b><span data-count="7">7</span></b><span class="k" data-i18n="cr.s3">days to deliver a 13-video campaign</span></div>
+          <div class="surface a-up"><b><span data-count="5">5</span></b><span class="k" data-i18n="cr.s4">brands across tourism, sports events and food</span></div>
+        </div>
+        <nav class="cr-tabs a-up" aria-label="Content studio">
+          <a href="#cr-video"><small>01</small><span data-i18n="cr.n1">Video</span></a>
+          <a href="#cr-ai"><small>02</small><span data-i18n="cr.n2">AI studio</span></a>
+          <a href="#cr-design"><small>03</small><span data-i18n="cr.n3">Design</span></a>
+          <a href="#cr-strategy"><small>04</small><span data-i18n="cr.n4">Strategy &amp; results</span></a>
+        </nav>
+
+        <!-- 01 VIDEO -->
+        <div class="cr-ch" id="cr-video">
+          <div class="chh a-up"><span class="chn">01</span><div><h3 data-i18n="cr.c1">Video that stops the scroll</h3><p data-i18n="cr.c1p">Vertical-first, built for TikTok, Reels and Shorts. Every piece has one idea, a hook in the first seconds and a clear way to book.</p></div></div>
+
+          <article class="feat surface shine slow a-up">
+            <div class="phone"><video id="featVid" muted loop playsinline preload="none" poster="assets/work/atv/atv-juguete-poster.jpg" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video1-de-juguete-a-real-720.mp4"></video>
+              <button class="snd" id="featSnd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path id="sndWave" d="M17 9l4 6M21 9l-4 6"/></svg><span data-i18n="cr.snd">Sound</span></button>
+            </div>
+            <div class="ftx">
+              <div class="tagrow"><span class="tag ind" data-i18n="cr.ft1">Client campaign</span><span class="tag" data-i18n="cr.ft2">Tourism</span><span class="tag">TikTok · Reels · Shorts</span></div>
+              <h3 data-i18n="cr.fh">A quad-bike tour, 13 videos and one client portal, in seven days.</h3>
+              <p data-i18n="cr.fp1">The owner of ATV Extreme Adventure sent me a few WhatsApp voice notes: he wanted people to stop scrolling and book a tour. I answered with a campaign, not a video. Thirteen vertical pieces, each with its own hook: a toy that becomes the real quad, a video-game level, a rally roadbook that opens on the table, a chase to the river, a satellite dive onto Mombacho Volcano. Every route, distance and schedule on screen comes from his real data, down to the GPS of the footage.</p>
+              <p data-i18n="cr.fp2">He doesn't get files in a chat. He gets a branded portal where each video comes with a full-quality master, a light version for WhatsApp, the caption with hashtags, a cover image and its day in the posting calendar. He reviews, approves and posts from his phone.</p>
+              <div class="flow">
+                <div><b data-i18n="cr.f1k">1 · Brief</b><span data-i18n="cr.f1">Voice notes into concepts and scripts</span></div>
+                <div><b data-i18n="cr.f2k">2 · Shots</b><span data-i18n="cr.f2">AI hero shots plus real tour footage</span></div>
+                <div><b data-i18n="cr.f3k">3 · Edit</b><span data-i18n="cr.f3">Motion graphics, voice, licensed music</span></div>
+                <div class="h shine"><b data-i18n="cr.f4k">4 · Portal</b><span data-i18n="cr.f4">Review, approve, download, post</span></div>
+              </div>
+              <div class="kpis"><div class="kpi"><b>13</b><span data-i18n="cr.fk1">videos</span></div><div class="kpi"><b>7</b><span data-i18n="cr.fk2">days</span></div><div class="kpi"><b>3</b><span data-i18n="cr.fk3">formats per video</span></div><div class="kpi"><b>1</b><span data-i18n="cr.fk4">live client portal</span></div></div>
+              <div class="ctas"><a class="btn p mag" href="https://atv-extreme-adventure.vercel.app/" target="_blank" rel="noopener"><span data-i18n="cr.fc1">Open the live client portal</span> ↗</a><a class="btn mag" href="#reels" data-i18n="cr.fc2">Watch all 13</a></div>
+            </div>
+          </article>
+
+          <div class="reels-h a-up" id="reels"><h4 data-i18n="cr.rh">The full ATV campaign</h4><span data-i18n="cr.rhint">Hover to preview · click to watch with sound · in Spanish, for the local market</span></div>
+          <div class="reels">
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video1-de-juguete-a-real-720.mp4" data-poster="assets/work/atv/atv-juguete-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-juguete-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">01</span><span class="du">27 s</span></span>
+  <span class="rt"><b data-i18n="cr.v1">From toy to real</b><small data-i18n="cr.v1s">Flagship · a toy quad assembles in mid-air and lands as the real one</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video2-epico-720.mp4" data-poster="assets/work/atv/atv-epico-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-epico-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">02</span><span class="du">72 s</span></span>
+  <span class="rt"><b data-i18n="cr.v2">The epic tour film</b><small data-i18n="cr.v2s">Narrated · AI voice-over, original score, real engine sound</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video3-esto-no-es-un-paseo-720.mp4" data-poster="assets/work/atv/atv-paseo-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-paseo-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">03</span><span class="du">50 s</span></span>
+  <span class="rt"><b data-i18n="cr.v3">This is no joyride</b><small data-i18n="cr.v3s">No narration · effects drawn on the real footage</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video4-el-reto-720.mp4" data-poster="assets/work/atv/atv-el-reto-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-el-reto-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">04</span><span class="du">30 s</span></span>
+  <span class="rt"><b data-i18n="cr.v4">The challenge</b><small data-i18n="cr.v4s">Video-game mode · levels, points and the volcano as the final boss</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video5-tu-turno-720.mp4" data-poster="assets/work/atv/atv-tu-turno-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-tu-turno-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">05</span><span class="du">40 s</span></span>
+  <span class="rt"><b data-i18n="cr.v5">Your turn</b><small data-i18n="cr.v5s">First person · helmet on, countdown, go</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video6-desde-el-espacio-720.mp4" data-poster="assets/work/atv/atv-espacio-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-espacio-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">06</span><span class="du">60 s</span></span>
+  <span class="rt"><b data-i18n="cr.v6">From space</b><small data-i18n="cr.v6s">A satellite dive down to Mombacho Volcano</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video7-las-rutas-720.mp4" data-poster="assets/work/atv/atv-rutas-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-rutas-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">07</span><span class="du">42 s</span></span>
+  <span class="rt"><b data-i18n="cr.v7">The routes</b><small data-i18n="cr.v7s">Each route starts as a painting that comes alive</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video8-vivilo-720.mp4" data-poster="assets/work/atv/atv-vivilo-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-vivilo-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">08</span><span class="du">40 s</span></span>
+  <span class="rt"><b data-i18n="cr.v8">Live it</b><small data-i18n="cr.v8s">The shots break out of a 3D phone: stop watching, live it</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video9-pump-it-720.mp4" data-poster="assets/work/atv/atv-pumpit-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-pumpit-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">09</span><span class="du">43 s</span></span>
+  <span class="rt"><b data-i18n="cr.v9">Pump It</b><small data-i18n="cr.v9s">Best moments, cut to the beat</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video10-libro-de-rutas-720.mp4" data-poster="assets/work/atv/atv-libro-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-libro-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">10</span><span class="du">58 s</span></span>
+  <span class="rt"><b data-i18n="cr.v10">The route book</b><small data-i18n="cr.v10s">A rally roadbook opens on the table and builds each route</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video11-aguas-agrias.mp4" data-poster="assets/work/atv/atv-aguas-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-aguas-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">11</span><span class="du">48 s</span></span>
+  <span class="rt"><b data-i18n="cr.v11">Chase to the river</b><small data-i18n="cr.v11s">Chase mode on the best-selling route</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video12-ruta-larga-720.mp4" data-poster="assets/work/atv/atv-ruta-larga-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-ruta-larga-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">12</span><span class="du">46 s</span></span>
+  <span class="rt"><b data-i18n="cr.v12">Volcano to lake</b><small data-i18n="cr.v12s">52 km route with a satellite map drawn from the footage's GPS</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="https://atv-extreme-adventure.vercel.app/media/atv-video13-finca-pancasan-720.mp4" data-poster="assets/work/atv/atv-pancasan-poster.jpg">
+  <span class="rv"><img src="assets/work/atv/atv-pancasan-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">13</span><span class="du">43 s</span></span>
+  <span class="rt"><b data-i18n="cr.v13">Finca Pancasán</b><small data-i18n="cr.v13s">Mountain trail on the slope of the volcano</small></span>
+</button>
+          </div>
+          <div class="reels-h a-up"><h4 data-i18n="cr.mh">More motion work</h4></div>
+          <div class="reels more">
+<button class="reel v a-up" type="button" data-src="assets/work/video/pachamama-sponsor.mp4" data-poster="assets/work/video/pachamama-sponsor-poster.jpg">
+  <span class="rv"><img src="assets/work/video/pachamama-sponsor-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Food</span><span class="du">18 s</span></span>
+  <span class="rt"><b data-i18n="cr.m1">Batidos Pachamama · sponsor spot</b><small data-i18n="cr.m1s">A drone dive over Granada that lands on the storefront, then a 3D smoothie and the WhatsApp to order</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="assets/work/video/xolo-stopmotion.mp4" data-poster="assets/work/video/xolo-stopmotion-poster.jpg">
+  <span class="rv"><img src="assets/work/video/xolo-stopmotion-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Brand</span><span class="du">50 s</span></span>
+  <span class="rt"><b data-i18n="cr.m2">Xolo Run · stop-motion carousel</b><small data-i18n="cr.m2s">Seven animated slides with one AI character kept consistent from start to finish</small></span>
+</button>
+<button class="reel v a-up" type="button" data-src="assets/work/video/xolo-walkthrough.mp4" data-poster="assets/work/video/xolo-walkthrough-poster.jpg">
+  <span class="rv"><img src="assets/work/video/xolo-walkthrough-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Product</span><span class="du">42 s</span></span>
+  <span class="rt"><b data-i18n="cr.m3">Xolo Run · product walkthrough</b><small data-i18n="cr.m3s">Motion graphics that explain the organizer app in 42 seconds</small></span>
+</button>
+<button class="reel h a-up" type="button" data-src="assets/work/video/intro-film.mp4" data-poster="assets/work/video/intro-film-poster.jpg">
+  <span class="rv"><img src="assets/work/video/intro-film-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Motion</span><span class="du">12 s</span></span>
+  <span class="rt"><b data-i18n="cr.m4">Intro film, written as code</b><small data-i18n="cr.m4s">12 s of kinetic type built in HyperFrames, with a synthesized score</small></span>
+</button>
+          </div>
+        </div>
+
+        <!-- 02 AI STUDIO -->
+        <div class="cr-ch" id="cr-ai">
+          <div class="chh a-up"><span class="chn">02</span><div><h3 data-i18n="cr.c2">An AI studio, run like an operation</h3><p data-i18n="cr.c2p">AI gives me speed. Judgment decides what ships. Each tool has one job in the pipeline, every shot is picked by hand, and every claim on screen is checked against the client's real information before it goes out.</p></div></div>
+          <div class="ai-grid">
+<div class="aic surface spot a-up"><b>Higgsfield · Seedance</b><p data-i18n="cr.ai1">Image-to-video hero shots: a toy quad that turns real, a roadbook that opens, a camera flying into the trail.</p></div>
+<div class="aic surface spot a-up"><b>Kling</b><p data-i18n="cr.ai2">Product in motion: the 3D smoothie cup for the Pachamama sponsor spot.</p></div>
+<div class="aic surface spot a-up"><b>Gemini</b><p data-i18n="cr.ai3">Reference frames and storyboards: nine illustrated pages for the route book, aerials of Granada.</p></div>
+<div class="aic surface spot a-up"><b>ElevenLabs</b><p data-i18n="cr.ai4">Spanish voice-over for the narrated tour film, timed to the edit.</p></div>
+<div class="aic surface spot a-up"><b>HyperFrames</b><p data-i18n="cr.ai5">Motion graphics written as code and rendered to MP4: titles, maps, counters, route cards.</p></div>
+<div class="aic surface spot a-up"><b>Stable Diffusion XL</b><p data-i18n="cr.ai6">Backgrounds generated at print resolution for a 4-meter podium wall.</p></div>
+<div class="aic surface spot a-up"><b>Claude Code</b><p data-i18n="cr.ai7">The production line: the client portal, captions, posting calendar and batch renders in two sizes.</p></div>
+<div class="aic surface spot a-up"><b>Photoshop · After Effects</b><p data-i18n="cr.ai8">Finishing: retouching, compositing and print-ready files.</p></div>
+          </div>
+        </div>
+
+        <!-- 03 DESIGN -->
+        <div class="cr-ch" id="cr-design">
+          <div class="chh a-up"><span class="chn">03</span><div><h3 data-i18n="cr.c3">Campaigns people can see from the start line</h3><p data-i18n="cr.c3p">Full visual systems for running events in Nicaragua: launch and deadline posts, prize announcements, race bibs, the official jersey, a story countdown, co-marketing with partner races and a four-meter podium wall for 13 sponsors. Plus the Xolo Run brand, built from zero.</p></div></div>
+          <div class="filt a-up" role="group" aria-label="Filter">
+            <button type="button" aria-pressed="true" data-f="all" data-i18n="cr.fa">All</button>
+            <button type="button" aria-pressed="false" data-f="races" data-i18n="cr.fb">Inferno Mombacho Trail</button>
+            <button type="button" aria-pressed="false" data-f="seasonal" data-i18n="cr.fcc">La Gran Navideña 10K</button>
+            <button type="button" aria-pressed="false" data-f="brand" data-i18n="cr.fd">Xolo Run brand</button>
+            <button type="button" aria-pressed="false" data-f="ai" data-i18n="cr.fe">AI characters</button>
+          </div>
+          <figure class="gi gwide a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-podium-wall.jpg"><img src="assets/work/img/inferno-podium-wall.jpg" alt="" loading="lazy" width="1800" height="1260" /></button><figcaption data-i18n="cr.g1">Podium and sponsor wall · 4 × 2.8 m print, AI-generated background at print resolution</figcaption></figure>
+          <div class="gal">
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-cover.jpg"><img src="assets/work/img/inferno-cover.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g0">Inferno Mombacho Trail · launch post</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-prizes.jpg"><img src="assets/work/img/inferno-prizes.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g2">Cash prizes post</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-challenges.jpg"><img src="assets/work/img/inferno-challenges.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g3">Three distances, one challenge each</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-elevation.jpg"><img src="assets/work/img/inferno-elevation.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g4">Elevation profile</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-jersey.jpg"><img src="assets/work/img/inferno-jersey.jpg" alt="" loading="lazy" width="1200" height="896" /></button><figcaption data-i18n="cr.g5">Official race jersey</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-bibs.jpg"><img src="assets/work/img/inferno-bibs.jpg" alt="" loading="lazy" width="1248" height="842" /></button><figcaption data-i18n="cr.g6">Race bibs · one color per distance and category, readable at a glance</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-lava.jpg"><img src="assets/work/img/inferno-lava.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g7">Announcement · the volcano is ready</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-pulse.jpg"><img src="assets/work/img/inferno-pulse.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g8">Teaser · the volcano's pulse</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-today.jpg"><img src="assets/work/img/inferno-today.jpg" alt="" loading="lazy" width="800" height="1000" /></button><figcaption data-i18n="cr.g9">Last call · registration closes tonight</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-trail.jpg"><img src="assets/work/img/inferno-trail.jpg" alt="" loading="lazy" width="600" height="750" /></button><figcaption data-i18n="cr.g10">Reminder · the 14K is waiting</figcaption></figure>
+<figure class="gi a-up" data-g="races"><button type="button" class="gb" data-img="assets/work/img/inferno-fauna.jpg"><img src="assets/work/img/inferno-fauna.jpg" alt="" loading="lazy" width="1400" height="588" /></button><figcaption data-i18n="cr.g11">Educational series · wildlife runners meet on the volcano</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-km.jpg"><img src="assets/work/img/navidena-km.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g12">La Gran Navideña · cross-promo: your kilometers count, 10% off</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-hat.jpg"><img src="assets/work/img/navidena-hat.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g13">From mustache to Santa hat · partner race co-marketing</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-flyer.jpg"><img src="assets/work/img/navidena-flyer.jpg" alt="" loading="lazy" width="851" height="1200" /></button><figcaption data-i18n="cr.g14">Printable QR coupon flyer</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-la-gran-navidena.jpg"><img src="assets/work/img/navidena-la-gran-navidena.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g15">Story 1 · the event</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-dorsal-en-el-bolsillo.jpg"><img src="assets/work/img/navidena-dorsal-en-el-bolsillo.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g16">Story · your bib, in your pocket</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-primeros-200.jpg"><img src="assets/work/img/navidena-primeros-200.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g17">Story · the first 200 get a Santa hat</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-tu-nombre.jpg"><img src="assets/work/img/navidena-tu-nombre.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g18">Story · your name on the bib</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-ya-tenes-tu-gorrito.jpg"><img src="assets/work/img/navidena-ya-tenes-tu-gorrito.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g19">Story · got your hat yet?</figcaption></figure>
+<figure class="gi a-up" data-g="seasonal"><button type="button" class="gb" data-img="assets/work/img/navidena-tu-kit.jpg"><img src="assets/work/img/navidena-tu-kit.jpg" alt="" loading="lazy" width="675" height="1200" /></button><figcaption data-i18n="cr.g20">Story · this shirt is for you</figcaption></figure>
+<figure class="gi a-up" data-g="brand"><button type="button" class="gb" data-img="assets/work/img/xolo-flyer.jpg"><img src="assets/work/img/xolo-flyer.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g21">Xolo Run · launch flyer for print, Instagram and WhatsApp, with QR codes</figcaption></figure>
+<figure class="gi a-up" data-g="brand"><button type="button" class="gb" data-img="assets/work/img/xolo-covers.jpg"><img src="assets/work/img/xolo-covers.jpg" alt="" loading="lazy" width="1248" height="722" /></button><figcaption data-i18n="cr.g22">Event cover series · one photo treatment and type system for every race</figcaption></figure>
+<figure class="gi a-up" data-g="brand"><button type="button" class="gb" data-img="assets/work/img/xolo-highlights.jpg"><img src="assets/work/img/xolo-highlights.jpg" alt="" loading="lazy" width="1400" height="360" /></button><figcaption data-i18n="cr.g23">Instagram highlight covers</figcaption></figure>
+<figure class="gi a-up" data-g="brand"><button type="button" class="gb" data-img="assets/work/img/xolo-night-masaya.jpg"><img src="assets/work/img/xolo-night-masaya.jpg" alt="" loading="lazy" width="960" height="1200" /></button><figcaption data-i18n="cr.g24">Beta event bib card</figcaption></figure>
+<figure class="gi a-up" data-g="ai"><button type="button" class="gb" data-img="assets/work/img/xolo-char-finish.jpg"><img src="assets/work/img/xolo-char-finish.jpg" alt="" loading="lazy" width="896" height="1200" /></button><figcaption data-i18n="cr.g25">AI character series · the finish line</figcaption></figure>
+<figure class="gi a-up" data-g="ai"><button type="button" class="gb" data-img="assets/work/img/xolo-char-win.jpg"><img src="assets/work/img/xolo-char-win.jpg" alt="" loading="lazy" width="896" height="1200" /></button><figcaption data-i18n="cr.g26">AI character series · the win</figcaption></figure>
+<figure class="gi a-up" data-g="ai"><button type="button" class="gb" data-img="assets/work/img/xolo-dawn.jpg"><img src="assets/work/img/xolo-dawn.jpg" alt="" loading="lazy" width="900" height="1200" /></button><figcaption data-i18n="cr.g27">AI character series · the 5 a.m. runner</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- 04 STRATEGY -->
+        <div class="cr-ch" id="cr-strategy">
+          <div class="chh a-up"><span class="chn">04</span><div><h3 data-i18n="cr.c4">Strategy first, then the numbers</h3><p data-i18n="cr.c4p">Pretty content that nobody acts on is a cost. I plan by funnel stage, tag every link, and read the results every week to decide what to repeat and what to cut.</p></div></div>
+          <div class="st-grid">
+            <div class="stm surface spot a-up">
+              <h4 data-i18n="cr.sm">What I measure</h4>
+              <div class="fun"><div><b data-i18n="cr.sm1k">Awareness</b><span data-i18n="cr.sm1">Reach, 3-second hook rate, watch time</span></div><div><b data-i18n="cr.sm2k">Consideration</b><span data-i18n="cr.sm2">Saves, shares, comments, DMs</span></div><div><b data-i18n="cr.sm3k">Conversion</b><span data-i18n="cr.sm3">Link clicks, cost per lead, sign-ups by UTM source</span></div></div>
+              <p data-i18n="cr.smr">Result on Xolo Run: 12 reels, 385K+ views in five weeks, the best one at 113K, with every sign-up attributed to its channel on a live dashboard.</p>
+            </div>
+            <a class="doc surface spot a-up" href="assets/work/docs/content-plan-three-brands.pdf" target="_blank" rel="noopener"><span class="dk">PDF</span><b data-i18n="cr.d1">Content plan: one owner, three brands</b><span data-i18n="cr.d1p">Pillars, a weekly calendar with hooks and captions, KPIs per brand and a one-page Friday report.</span></a>
+            <a class="doc surface spot a-up" href="assets/work/docs/campaign-brief.pdf" target="_blank" rel="noopener"><span class="dk">PDF</span><b data-i18n="cr.d2">Campaign brief</b><span data-i18n="cr.d2p">Objective, audience, message, paid media plan, budget split and the KPIs that decide success.</span></a>
+            <a class="doc surface spot a-up" href="assets/work/docs/copywriting-samples.pdf" target="_blank" rel="noopener"><span class="dk">PDF</span><b data-i18n="cr.d3">Copywriting samples</b><span data-i18n="cr.d3p">Spanish originals and their English adaptations: captions, calls to action and partner posts.</span></a>
+          </div>
+          <div class="live a-up">
+            <span class="lvk" data-i18n="cr.lv">See it live</span>
+            <a class="ext" href="https://atv-extreme-adventure.vercel.app/" target="_blank" rel="noopener"><span data-i18n="cr.lv1">ATV client portal</span> ↗</a>
+            <a class="ext" href="https://xolorun.com" target="_blank" rel="noopener">xolorun.com ↗</a>
+            <a class="ext" href="https://xolorun.com/encuesta/" target="_blank" rel="noopener"><span data-i18n="cr.lv2">Xolo Run runner survey</span> ↗</a>
+            <a class="ext" href="https://www.instagram.com/xolorun/" target="_blank" rel="noopener">Instagram @xolorun ↗</a>
+          </div>
+          <div class="cr-cta surface shine slow a-up">
+            <h3 data-i18n="cr.ct">Ideas are easy. Shipping them every week, on brand and on time, is the job.</h3>
+            <p data-i18n="cr.ctp">That is what I bring: a creative eye with an operator's discipline, fluent in English and Spanish.</p>
+            <div class="ctas"><a class="btn p mag" href="mailto:rosales.kenneth@hotmail.com"><span data-i18n="cr.cb1">Let's talk</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a><a class="btn mag" href="#about" data-i18n="cr.cb2">Read my full background</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="lb" id="lb" aria-label="Viewer">
+      <button class="lb-x" type="button" id="lbX" aria-label="Close">×</button>
+      <button class="lb-n lb-p" type="button" id="lbP" aria-label="Previous">‹</button>
+      <div class="lb-m" id="lbM"></div>
+      <button class="lb-n lb-f" type="button" id="lbF" aria-label="Next">›</button>
+      <p class="lb-c" id="lbC"></p>
+    </dialog>
+
     <!-- ALONGSIDE -->
     <section class="sec" id="building" aria-labelledby="h-build">
       <div class="wrap">
@@ -707,6 +1029,148 @@
     /* ---------- i18n ---------- */
     var ES = {
       "skip": "Ir al contenido",
+      "cr.v1": "De juguete a real",
+      "cr.v1s": "Video insignia · un cuadraciclo de juguete se arma en el aire y aterriza convertido en el real",
+      "cr.v2": "Video épico del tour",
+      "cr.v2s": "Narrado · voz con IA, música original y sonido real de las cuadras",
+      "cr.v3": "Esto no es un paseo",
+      "cr.v3s": "Sin narración · efectos dibujados sobre las tomas reales",
+      "cr.v4": "El reto",
+      "cr.v4s": "Modo videojuego · niveles, puntos y el volcán como jefe final",
+      "cr.v5": "Tu turno",
+      "cr.v5s": "En primera persona · casco, conteo y arranque",
+      "cr.v6": "Desde el espacio",
+      "cr.v6s": "Del satélite al volcán Mombacho",
+      "cr.v7": "Las rutas",
+      "cr.v7s": "Cada ruta empieza como una pintura que cobra vida",
+      "cr.v8": "Vivilo",
+      "cr.v8s": "Las tomas salen de un teléfono 3D: dejá de mirarlo, vivilo",
+      "cr.v9": "Pump It",
+      "cr.v9s": "Los mejores momentos, al golpe de la música",
+      "cr.v10": "El libro de rutas",
+      "cr.v10s": "Un roadbook de rally se abre y arma cada ruta",
+      "cr.v11": "Persecución al río",
+      "cr.v11s": "Modo persecución en la ruta más vendida",
+      "cr.v12": "Del volcán al lago",
+      "cr.v12s": "Ruta de 52 km con mapa satelital trazado con el GPS de las tomas",
+      "cr.v13": "Finca Pancasán",
+      "cr.v13s": "Sendero de montaña en la falda del volcán",
+      "cr.m1": "Batidos Pachamama · spot de patrocinador",
+      "cr.m1s": "Un dron baja sobre Granada hasta la fachada, luego un batido en 3D y el WhatsApp para pedir",
+      "cr.m2": "Xolo Run · carrusel en stop-motion",
+      "cr.m2s": "Siete láminas animadas con un mismo personaje de IA, idéntico de principio a fin",
+      "cr.m3": "Xolo Run · recorrido del producto",
+      "cr.m3s": "Motion graphics que explican la app para organizadores en 42 segundos",
+      "cr.m4": "Película de presentación, escrita en código",
+      "cr.m4s": "12 s de tipografía en movimiento hechos en HyperFrames, con música sintetizada",
+      "cr.g0": "Inferno Mombacho Trail · post de lanzamiento",
+      "cr.g1": "Mural del podio y patrocinadores · impresión de 4 × 2,8 m, fondo generado con IA a resolución de imprenta",
+      "cr.g2": "Post de premios en efectivo",
+      "cr.g3": "Tres distancias, un reto para cada una",
+      "cr.g4": "Altimetría",
+      "cr.g5": "Camiseta oficial",
+      "cr.g6": "Dorsales · un color por distancia y categoría, legibles de un vistazo",
+      "cr.g7": "Anuncio · el volcán ya está listo",
+      "cr.g8": "Teaser · el pulso del volcán",
+      "cr.g9": "Última llamada · las inscripciones cierran hoy",
+      "cr.g10": "Recordatorio · el 14K te espera",
+      "cr.g11": "Serie educativa · la fauna y flora que se cruzan en el volcán",
+      "cr.g12": "La Gran Navideña · promoción cruzada: tus kilómetros suman, 10 % de descuento",
+      "cr.g13": "Del bigote al gorrito · co-marketing con otra carrera",
+      "cr.g14": "Flyer imprimible con cupón QR",
+      "cr.g15": "Historia 1 · el evento",
+      "cr.g16": "Historia · tu dorsal en el bolsillo",
+      "cr.g17": "Historia · los primeros 200 se llevan gorrito",
+      "cr.g18": "Historia · tu nombre en el dorsal",
+      "cr.g19": "Historia · ¿ya tenés tu gorrito?",
+      "cr.g20": "Historia · esta camiseta es para vos",
+      "cr.g21": "Xolo Run · flyer de lanzamiento para imprenta, Instagram y WhatsApp, con QR",
+      "cr.g22": "Serie de portadas · un mismo tratamiento de foto y tipografía para cada carrera",
+      "cr.g23": "Portadas de historias destacadas",
+      "cr.g24": "Tarjeta de dorsal del evento beta",
+      "cr.g25": "Serie de personajes con IA · la meta",
+      "cr.g26": "Serie de personajes con IA · el triunfo",
+      "cr.g27": "Serie de personajes con IA · el corredor de las 5 a. m.",
+      "cr.ai1": "Tomas principales de imagen a video: un cuadraciclo de juguete que se vuelve real, un roadbook que se abre, una cámara que vuela hacia el sendero.",
+      "cr.ai2": "Producto en movimiento: el vaso de batido en 3D del spot de Pachamama.",
+      "cr.ai3": "Cuadros de referencia y storyboards: nueve páginas ilustradas para el libro de rutas y aéreas de Granada.",
+      "cr.ai4": "Voz en off en español para el video narrado, sincronizada con el montaje.",
+      "cr.ai5": "Motion graphics escritos en código y renderizados a MP4: títulos, mapas, contadores y fichas de ruta.",
+      "cr.ai6": "Fondos generados a resolución de imprenta para un mural de podio de 4 metros.",
+      "cr.ai7": "La línea de producción: el portal del cliente, captions, calendario de publicación y renders en dos tamaños.",
+      "cr.ai8": "Acabado: retoque, composición y archivos listos para imprenta.",
+      "cr.p": "Las operaciones me enseñaron a entregar a tiempo, siempre. Este año puse esa disciplina detrás del contenido: armo la idea, dirijo las tomas con IA, edito, escribo el caption y le entrego al cliente un portal donde todo está listo para publicar. Trece videos para un cliente en siete días, 385K vistas en nuestros propios reels y un mural de patrocinadores de cuatro metros para una carrera en un volcán. Este es el trabajo.",
+      "cr.s1": "videos producidos, de la idea al corte final",
+      "cr.s2": "vistas en 12 reels de Xolo Run en cinco semanas",
+      "cr.s3": "días para entregar una campaña de 13 videos",
+      "cr.s4": "marcas de turismo, eventos deportivos y comida",
+      "cr.n1": "Video",
+      "cr.n2": "Estudio de IA",
+      "cr.n3": "Diseño",
+      "cr.n4": "Estrategia y resultados",
+      "cr.c1": "Video que detiene el scroll",
+      "cr.c1p": "Pensado primero en vertical, para TikTok, Reels y Shorts. Cada pieza tiene una idea, un gancho en los primeros segundos y una forma clara de reservar.",
+      "cr.fh": "Un tour en cuadraciclo, 13 videos y un portal para el cliente, en siete días.",
+      "cr.fp1": "El dueño de ATV Extreme Adventure me mandó unas notas de voz por WhatsApp: quería que la gente dejara de scrollear y reservara un tour. Le respondí con una campaña, no con un video. Trece piezas verticales, cada una con su propio gancho: un juguete que se vuelve el cuadraciclo real, un nivel de videojuego, un roadbook de rally que se abre sobre la mesa, una persecución hasta el río, una bajada desde el satélite hasta el volcán Mombacho. Cada ruta, distancia y horario en pantalla sale de sus datos reales, hasta el GPS de las tomas.",
+      "cr.fp2": "No recibe archivos sueltos en un chat. Recibe un portal con su marca donde cada video trae el original en alta calidad, una versión liviana para WhatsApp, el caption con hashtags, la portada y su día en el calendario de publicación. Revisa, aprueba y publica desde el teléfono.",
+      "cr.rh": "La campaña completa de ATV",
+      "cr.rhint": "Pasá el cursor para ver un adelanto · clic para verlo con sonido · en español, para el mercado local",
+      "cr.mh": "Más trabajo de motion",
+      "cr.c2": "Un estudio de IA, manejado como una operación",
+      "cr.c2p": "La IA me da velocidad; el criterio decide qué sale. Cada herramienta tiene un trabajo en la línea de producción, cada toma se elige a mano y cada dato en pantalla se verifica con la información real del cliente antes de publicarse.",
+      "cr.c3": "Campañas que se ven desde la línea de salida",
+      "cr.c3p": "Sistemas visuales completos para carreras en Nicaragua: posts de lanzamiento y cierre, anuncios de premios, dorsales, la camiseta oficial, una cuenta regresiva en historias, co-marketing con otras carreras y un mural de podio de cuatro metros para 13 patrocinadores. Además, la marca Xolo Run, hecha desde cero.",
+      "cr.c4": "Primero la estrategia, después los números",
+      "cr.c4p": "El contenido bonito que nadie usa es un gasto. Planifico por etapa del embudo, etiqueto cada enlace y leo los resultados cada semana para decidir qué repetir y qué cortar.",
+      "cr.sm": "Qué mido",
+      "cr.smr": "Resultado en Xolo Run: 12 reels, más de 385K vistas en cinco semanas, el mejor con 113K, y cada registro atribuido a su canal en un tablero en vivo.",
+      "cr.d1": "Plan de contenido: un dueño, tres marcas",
+      "cr.d1p": "Pilares, un calendario semanal con ganchos y captions, KPIs por marca y un reporte de una página cada viernes.",
+      "cr.d2": "Brief de campaña",
+      "cr.d2p": "Objetivo, audiencia, mensaje, plan de pauta, reparto del presupuesto y los KPIs que definen el éxito.",
+      "cr.d3": "Muestras de copywriting",
+      "cr.d3p": "Originales en español y su adaptación al inglés: captions, llamados a la acción y posts para aliados.",
+      "cr.lv": "Miralo en vivo",
+      "cr.ct": "Las ideas sobran. Sacarlas cada semana, con la marca y a tiempo, es el trabajo.",
+      "cr.ctp": "Eso es lo que aporto: ojo creativo con disciplina de operaciones, en inglés y en español.",
+      "hero.newk": "Nuevo",
+      "hero.new": "Estudio de contenido: 17 videos, campañas y producción con IA",
+      "nav.cr": "Contenido",
+      "map.cr": "Estudio de contenido",
+      "cr.k": "Estudio de contenido · 2026",
+      "cr.t": "Ideas que salen a tiempo, a ritmo de agencia.",
+      "cr.snd": "Sonido",
+      "cr.ft1": "Campaña para cliente",
+      "cr.ft2": "Turismo",
+      "cr.f1k": "1 · Brief",
+      "cr.f1": "Notas de voz convertidas en conceptos y guiones",
+      "cr.f2k": "2 · Tomas",
+      "cr.f2": "Tomas con IA más metraje real del tour",
+      "cr.f3k": "3 · Edición",
+      "cr.f3": "Motion graphics, voz y música con licencia",
+      "cr.f4k": "4 · Portal",
+      "cr.f4": "Revisar, aprobar, descargar y publicar",
+      "cr.fk1": "videos",
+      "cr.fk2": "días",
+      "cr.fk3": "formatos por video",
+      "cr.fk4": "portal del cliente en vivo",
+      "cr.fc1": "Abrir el portal del cliente",
+      "cr.fc2": "Ver los 13",
+      "cr.fa": "Todo",
+      "cr.fb": "Inferno Mombacho Trail",
+      "cr.fcc": "La Gran Navideña 10K",
+      "cr.fd": "Marca Xolo Run",
+      "cr.fe": "Personajes con IA",
+      "cr.sm1k": "Alcance",
+      "cr.sm1": "Alcance, retención a 3 segundos, tiempo de visualización",
+      "cr.sm2k": "Consideración",
+      "cr.sm2": "Guardados, compartidos, comentarios, mensajes",
+      "cr.sm3k": "Conversión",
+      "cr.sm3": "Clics, costo por lead, registros por fuente UTM",
+      "cr.lv1": "Portal del cliente ATV",
+      "cr.lv2": "Encuesta de corredores de Xolo Run",
+      "cr.cb1": "Conversemos",
+      "cr.cb2": "Ver toda mi trayectoria",
       "nav.help": "Dónde encajo", "nav.xp": "Experiencia", "nav.work": "Casos", "nav.contact": "Contacto",
       "hero.status": "Disponible para roles remotos · Executive Assistant · Chief of Staff · Operaciones de programas",
       "hero.l1": "Programas en orden,", "hero.l2": "la dirección un paso adelante.",
@@ -848,7 +1312,7 @@
 
 
     /* ---------- section map (rail + jump menu) ---------- */
-    var mapIds = ["top", "about", "help", "experience", "work", "building", "tools", "contact"];
+    var mapIds = ["top", "about", "help", "experience", "work", "creative", "building", "tools", "contact"];
     var mapSecs = mapIds.map(function (id) { return document.getElementById(id); });
     var railLinks = [].slice.call(document.querySelectorAll("#rail a")), sheetLinks = [].slice.call(document.querySelectorAll("#jumpSheet a"));
     var jump = document.getElementById("jump"), jumpBtn = document.getElementById("jumpBtn"), jumpPos = document.getElementById("jumpPos"), rail = document.getElementById("rail");
@@ -890,6 +1354,95 @@
         el.appendChild(d);
       }
     });
+
+
+    /* ---------- content studio: previews, viewer, filters ---------- */
+    (function () {
+      var lb = document.getElementById("lb"), lbM = document.getElementById("lbM"), lbC = document.getElementById("lbC");
+      var lbP = document.getElementById("lbP"), lbF = document.getElementById("lbF"), list = [], idx = 0;
+      function caption(el) { var c = el.closest(".reel, .gi"); if (!c) return ""; var b = c.querySelector(".rt b, figcaption"), s = c.querySelector(".rt small"); return (b ? b.textContent : "") + (s ? " · " + s.textContent : ""); }
+      function show(i) {
+        idx = (i + list.length) % list.length; var el = list[idx];
+        lbM.innerHTML = "";
+        if (el.hasAttribute("data-src")) {
+          var v = document.createElement("video"); v.src = el.getAttribute("data-src"); v.poster = el.getAttribute("data-poster") || ""; v.controls = true; v.autoplay = true; v.playsInline = true; lbM.appendChild(v);
+        } else {
+          var im = document.createElement("img"); im.src = el.getAttribute("data-img"); im.alt = caption(el); lbM.appendChild(im);
+        }
+        lbC.textContent = caption(el);
+        lbP.hidden = lbF.hidden = list.length < 2;
+      }
+      function open(group, el) {
+        list = [].slice.call(document.querySelectorAll(group)).filter(function (x) { var g = x.closest(".gi"); return !(g && g.hidden); });
+        show(list.indexOf(el));
+        if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
+        var fv = document.getElementById("featVid"); if (fv) fv.pause();
+      }
+      function close() { lbM.innerHTML = ""; if (lb.close) lb.close(); else lb.removeAttribute("open"); }
+      document.getElementById("lbX").addEventListener("click", close);
+      lb.addEventListener("close", function () { lbM.innerHTML = ""; var fv = document.getElementById("featVid"); if (fv && fv._vis) fv.play().catch(function () {}); });
+      lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+      lbP.addEventListener("click", function () { show(idx - 1); });
+      lbF.addEventListener("click", function () { show(idx + 1); });
+      lb.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft") show(idx - 1); if (e.key === "ArrowRight") show(idx + 1); });
+      document.querySelectorAll(".reel").forEach(function (r) {
+        r.addEventListener("click", function () { open(".reel", r); });
+        if (!fine || reduce) return;
+        var pv;
+        r.addEventListener("pointerenter", function () {
+          pv = document.createElement("video"); pv.muted = true; pv.loop = true; pv.playsInline = true; pv.preload = "auto"; pv.src = r.getAttribute("data-src");
+          r.querySelector(".rv").insertBefore(pv, r.querySelector(".pl")); pv.play().then(function () { r.classList.add("playing"); }).catch(function () {});
+        });
+        r.addEventListener("pointerleave", function () { r.classList.remove("playing"); if (pv) { pv.pause(); pv.removeAttribute("src"); pv.load(); pv.remove(); pv = null; } });
+      });
+      document.querySelectorAll(".gb").forEach(function (b) { b.addEventListener("click", function () { open(".gb", b); }); });
+      var fb = [].slice.call(document.querySelectorAll(".filt button"));
+      fb.forEach(function (b) {
+        b.addEventListener("click", function () {
+          var f = b.getAttribute("data-f");
+          fb.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          document.querySelectorAll(".gi").forEach(function (g) { g.hidden = f !== "all" && g.getAttribute("data-g") !== f; });
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
+        });
+      });
+      // featured phone: loads and plays only while on screen
+      var fv = document.getElementById("featVid"), snd = document.getElementById("featSnd"), wave = document.getElementById("sndWave");
+      if (fv && "IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            fv._vis = e.isIntersecting;
+            if (e.isIntersecting) { if (!fv.src) fv.src = fv.getAttribute("data-src"); if (!reduce || !fv.muted) fv.play().catch(function () {}); }
+            else fv.pause();
+          });
+        }, { threshold: .35 }).observe(fv);
+      } else if (fv) { fv.src = fv.getAttribute("data-src"); }
+      snd.addEventListener("click", function () {
+        if (!fv.src) fv.src = fv.getAttribute("data-src");
+        fv.muted = !fv.muted; snd.setAttribute("aria-pressed", String(!fv.muted));
+        wave.setAttribute("d", fv.muted ? "M17 9l4 6M21 9l-4 6" : "M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11");
+        if (!fv.muted) { fv.currentTime = 0; fv.play().catch(function () {}); }
+      });
+      // tab highlight
+      var tabs = [].slice.call(document.querySelectorAll(".cr-tabs a")), chs = tabs.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+      function markTabs() { var c = -1; chs.forEach(function (s, i) { if (s.getBoundingClientRect().top < innerHeight * .5) c = i; }); tabs.forEach(function (a, i) { a.classList.toggle("on", i === c); }); }
+      addEventListener("scroll", markTabs, { passive: true }); markTabs();
+      // safety net: after a long jump (hero link, tabs, filters) reveal anything on screen that the scroll animation skipped
+      if ("IntersectionObserver" in window) {
+        var safe = new IntersectionObserver(function (es) {
+          es.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var el = e.target;
+            setTimeout(function () {
+              if (parseFloat(getComputedStyle(el).opacity) > .05) return;
+              if (window.gsap) gsap.to(el, { autoAlpha: 1, y: 0, duration: .6, ease: "power3.out", overwrite: true, clearProps: "transform" });
+              else { el.style.opacity = 1; el.style.visibility = "visible"; }
+              el.querySelectorAll("[data-count]").forEach(function (c) { c.textContent = c.getAttribute("data-count"); });
+            }, 700);
+          });
+        }, { threshold: .01 });
+        document.querySelectorAll(".a-up").forEach(function (el) { safe.observe(el); });
+      }
+    })();
 
     /* ---------- copy email ---------- */
     var toast = document.getElementById("toast");
