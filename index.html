@@ -394,8 +394,8 @@
     .reels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     @media (min-width: 640px) { .reels { grid-template-columns: repeat(3, 1fr); } }
     @media (min-width: 960px) { .reels { grid-template-columns: repeat(5, 1fr); } }
-    .reels.more { grid-template-columns: repeat(2, 1fr); }
-    @media (min-width: 960px) { .reels.more { grid-template-columns: 1fr 1fr 1fr 2.2fr; align-items: start; } }
+    .reels.more { align-items: start; }
+    .reels.more .reel.h { grid-column: span 2; }
     .reel { display: block; padding: 0; text-align: left; border: 0; background: none; color: inherit; cursor: pointer; font: inherit; }
     .reel .rv { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: var(--card-2); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s, border-color .35s, box-shadow .35s; }
     .reel.h .rv { aspect-ratio: 16 / 9; }
@@ -528,7 +528,7 @@
     <section class="hero" id="top" aria-labelledby="h1">
       <div class="glow a"></div><div class="glow b"></div>
       <div class="wrap">
-        <span class="status shine slow a-up"><i aria-hidden="true"></i><span data-i18n="hero.status">Open to remote roles · Executive Assistant · Chief of Staff · Program Operations</span></span><a class="new a-up" href="#creative"><em data-i18n="hero.newk">New</em><span data-i18n="hero.new">Content studio: 17 videos, campaigns and AI production</span> →</a>
+        <span class="status shine slow a-up"><i aria-hidden="true"></i><span data-i18n="hero.status">Open to remote roles · Executive Assistant · Chief of Staff · Program Operations</span></span><a class="new a-up" href="#creative"><em data-i18n="hero.newk">New</em><span data-i18n="hero.new">Content studio: 18 videos, campaigns and AI production</span> →</a>
         <h1 id="h1" class="split"><span class="l" data-i18n="hero.l1">Programs on track,</span><span class="l grad" data-i18n="hero.l2">leaders a step ahead.</span></h1>
         <p class="sub a-up" data-i18n="hero.sub">I work as the right hand of an executive or a team: I keep <b>projects on schedule</b>, <b>decisions backed by data</b> and <b>day-to-day operations under control</b>. 6+ years across global fintech risk &amp; compliance, legal operations and executive support.</p>
         <div class="pills a-up">
@@ -745,13 +745,13 @@
         <div class="head cr-head">
           <div class="eyebrow a-up" data-i18n="cr.k">Content studio · 2026</div>
           <h2 id="h-cr" class="split" data-i18n="cr.t">Ideas, shipped at agency speed.</h2>
-          <p class="a-up" data-i18n="cr.p">Operations taught me to deliver on time, every time. This year I put that discipline behind content: I shape the idea, direct the AI shots, cut the edit, write the caption and hand the client a portal where everything is ready to post. Thirteen videos for one client in seven days, 385K views on our own reels, and a four-meter sponsor wall for a volcano race. This is the work.</p>
+          <p class="a-up" data-i18n="cr.p">Operations taught me to deliver on time, every time. This year I put that discipline behind content: I shape the idea, direct the AI shots, cut the edit, write the caption and hand the client a portal where everything is ready to post. Thirteen videos for one client in seven days, all approved, 385K views on our own reels, and a four-meter sponsor wall for a volcano race. This is the work.</p>
         </div>
         <div class="cr-stats">
-          <div class="surface a-up"><b><span data-count="17">17</span></b><span class="k" data-i18n="cr.s1">videos produced, from concept to final cut</span></div>
+          <div class="surface a-up"><b><span data-count="18">18</span></b><span class="k" data-i18n="cr.s1">videos produced, from concept to final cut</span></div>
           <div class="surface a-up"><b><span data-count="385">385</span>K+</b><span class="k" data-i18n="cr.s2">views on 12 Xolo Run reels in five weeks</span></div>
           <div class="surface a-up"><b><span data-count="7">7</span></b><span class="k" data-i18n="cr.s3">days to deliver a 13-video campaign</span></div>
-          <div class="surface a-up"><b><span data-count="5">5</span></b><span class="k" data-i18n="cr.s4">brands across tourism, sports events and food</span></div>
+          <div class="surface a-up"><b><span data-count="6">6</span></b><span class="k" data-i18n="cr.s4">brands across tourism, sports events, food and drinks</span></div>
         </div>
         <nav class="cr-tabs a-up" aria-label="Content studio">
           <a href="#cr-video"><small>01</small><span data-i18n="cr.n1">Video</span></a>
@@ -772,14 +772,14 @@
               <div class="tagrow"><span class="tag ind" data-i18n="cr.ft1">Client campaign</span><span class="tag" data-i18n="cr.ft2">Tourism</span><span class="tag">TikTok · Reels · Shorts</span></div>
               <h3 data-i18n="cr.fh">A quad-bike tour, 13 videos and one client portal, in seven days.</h3>
               <p data-i18n="cr.fp1">The owner of ATV Extreme Adventure sent me a few WhatsApp voice notes: he wanted people to stop scrolling and book a tour. I answered with a campaign, not a video. Thirteen vertical pieces, each with its own hook: a toy that becomes the real quad, a video-game level, a rally roadbook that opens on the table, a chase to the river, a satellite dive onto Mombacho Volcano. Every route, distance and schedule on screen comes from his real data, down to the GPS of the footage.</p>
-              <p data-i18n="cr.fp2">He doesn't get files in a chat. He gets a branded portal where each video comes with a full-quality master, a light version for WhatsApp, the caption with hashtags, a cover image and its day in the posting calendar. He reviews, approves and posts from his phone.</p>
+              <p data-i18n="cr.fp2">He doesn't get files in a chat. He gets a branded portal where each video comes with a full-quality master, a light version for WhatsApp, the caption with hashtags, a cover image and its day in the posting calendar. He reviews, approves and posts from his phone. He approved all thirteen.</p>
               <div class="flow">
                 <div><b data-i18n="cr.f1k">1 · Brief</b><span data-i18n="cr.f1">Voice notes into concepts and scripts</span></div>
                 <div><b data-i18n="cr.f2k">2 · Shots</b><span data-i18n="cr.f2">AI hero shots plus real tour footage</span></div>
                 <div><b data-i18n="cr.f3k">3 · Edit</b><span data-i18n="cr.f3">Motion graphics, voice, licensed music</span></div>
                 <div class="h shine"><b data-i18n="cr.f4k">4 · Portal</b><span data-i18n="cr.f4">Review, approve, download, post</span></div>
               </div>
-              <div class="kpis"><div class="kpi"><b>13</b><span data-i18n="cr.fk1">videos</span></div><div class="kpi"><b>7</b><span data-i18n="cr.fk2">days</span></div><div class="kpi"><b>3</b><span data-i18n="cr.fk3">formats per video</span></div><div class="kpi"><b>1</b><span data-i18n="cr.fk4">live client portal</span></div></div>
+              <div class="kpis"><div class="kpi"><b>13</b><span data-i18n="cr.fk1">videos</span></div><div class="kpi"><b>7</b><span data-i18n="cr.fk2">days</span></div><div class="kpi"><b>3</b><span data-i18n="cr.fk3">formats per video</span></div><div class="kpi"><b>13/13</b><span data-i18n="cr.fk5">approved by the client</span></div><div class="kpi"><b>1</b><span data-i18n="cr.fk4">live client portal</span></div></div>
               <div class="ctas"><a class="btn p mag" href="https://atv-extreme-adventure.vercel.app/" target="_blank" rel="noopener"><span data-i18n="cr.fc1">Open the live client portal</span> ↗</a><a class="btn mag" href="#reels" data-i18n="cr.fc2">Watch all 13</a></div>
             </div>
           </article>
@@ -841,6 +841,10 @@
           </div>
           <div class="reels-h a-up"><h4 data-i18n="cr.mh">More motion work</h4></div>
           <div class="reels more">
+<button class="reel a-up" type="button" data-src="assets/work/video/aguasana-sponsor.mp4" data-poster="assets/work/video/aguasana-sponsor-poster.jpg">
+  <span class="rv"><img src="assets/work/video/aguasana-sponsor-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Sponsor</span><span class="du">48 s</span></span>
+  <span class="rt"><b data-i18n="cr.m5">Aguasana · official sponsor film</b><small data-i18n="cr.m5s">Opens with a single 15-second Google Flow shot: the runner drinks, the drop holds Granada, the camera rises to the Cathedral. Then the race, the bibs and the call to sign up.</small></span>
+</button>
 <button class="reel v a-up" type="button" data-src="assets/work/video/pachamama-sponsor.mp4" data-poster="assets/work/video/pachamama-sponsor-poster.jpg">
   <span class="rv"><img src="assets/work/video/pachamama-sponsor-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Food</span><span class="du">18 s</span></span>
   <span class="rt"><b data-i18n="cr.m1">Batidos Pachamama · sponsor spot</b><small data-i18n="cr.m1s">A drone dive over Granada that lands on the storefront, then a 3D smoothie and the WhatsApp to order</small></span>
@@ -853,6 +857,10 @@
   <span class="rv"><img src="assets/work/video/xolo-walkthrough-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Product</span><span class="du">42 s</span></span>
   <span class="rt"><b data-i18n="cr.m3">Xolo Run · product walkthrough</b><small data-i18n="cr.m3s">Motion graphics that explain the organizer app in 42 seconds</small></span>
 </button>
+<button class="reel a-up" type="button" data-src="assets/work/video/blender-terrain.mp4" data-poster="assets/work/video/blender-terrain-poster.jpg">
+  <span class="rv"><img src="assets/work/video/blender-terrain-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">3D</span><span class="du">5 s</span></span>
+  <span class="rt"><b data-i18n="cr.m6">3D flyover on real terrain · R&D</b><small data-i18n="cr.m6s">Built in Blender from real elevation and satellite data, with the route traced from the footage's GPS. Satellite imagery: Sentinel-2 cloudless by EOX (Copernicus data).</small></span>
+</button>
 <button class="reel h a-up" type="button" data-src="assets/work/video/intro-film.mp4" data-poster="assets/work/video/intro-film-poster.jpg">
   <span class="rv"><img src="assets/work/video/intro-film-poster.jpg" alt="" loading="lazy" width="540" height="960" /><span class="pl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="bd">Motion</span><span class="du">12 s</span></span>
   <span class="rt"><b data-i18n="cr.m4">Intro film, written as code</b><small data-i18n="cr.m4s">12 s of kinetic type built in HyperFrames, with a synthesized score</small></span>
@@ -862,7 +870,7 @@
 
         <!-- 02 AI STUDIO -->
         <div class="cr-ch" id="cr-ai">
-          <div class="chh a-up"><span class="chn">02</span><div><h3 data-i18n="cr.c2">An AI studio, run like an operation</h3><p data-i18n="cr.c2p">AI gives me speed. Judgment decides what ships. Each tool has one job in the pipeline, every shot is picked by hand, and every claim on screen is checked against the client's real information before it goes out.</p></div></div>
+          <div class="chh a-up"><span class="chn">02</span><div><h3 data-i18n="cr.c2">An AI studio, run like an operation</h3><p data-i18n="cr.c2p">AI gives me speed. Judgment decides what ships. Twelve tools, each with one job in the pipeline, every shot is picked by hand, and every claim on screen is checked against the client's real information before it goes out.</p></div></div>
           <div class="ai-grid">
 <div class="aic surface spot a-up"><b>Higgsfield · Seedance</b><p data-i18n="cr.ai1">Image-to-video hero shots: a toy quad that turns real, a roadbook that opens, a camera flying into the trail.</p></div>
 <div class="aic surface spot a-up"><b>Kling</b><p data-i18n="cr.ai2">Product in motion: the 3D smoothie cup for the Pachamama sponsor spot.</p></div>
@@ -872,6 +880,10 @@
 <div class="aic surface spot a-up"><b>Stable Diffusion XL</b><p data-i18n="cr.ai6">Backgrounds generated at print resolution for a 4-meter podium wall.</p></div>
 <div class="aic surface spot a-up"><b>Claude Code</b><p data-i18n="cr.ai7">The production line: the client portal, captions, posting calendar and batch renders in two sizes.</p></div>
 <div class="aic surface spot a-up"><b>Photoshop · After Effects</b><p data-i18n="cr.ai8">Finishing: retouching, compositing and print-ready files.</p></div>
+<div class="aic surface spot a-up"><b>Google Flow</b><p data-i18n="cr.ai9">Single-shot cinematic openings: 15 seconds in one take, from a sip of water to the Cathedral of Granada.</p></div>
+<div class="aic surface spot a-up"><b>Blender</b><p data-i18n="cr.ai10">3D scenes on real terrain: elevation and satellite data, volumetric clouds and the route traced from GPS, rendered in Cycles.</p></div>
+<div class="aic surface spot a-up"><b>Real-ESRGAN</b><p data-i18n="cr.ai11">AI upscaling that brings generated clips to a sharp 1080 × 1920 before the edit.</p></div>
+<div class="aic surface spot a-up"><b>Sound</b><p data-i18n="cr.ai12">Licensed music, sound effects on every cut, and original scores composed in code when a track has to fit the edit exactly.</p></div>
           </div>
         </div>
 
@@ -1029,6 +1041,15 @@
     /* ---------- i18n ---------- */
     var ES = {
       "skip": "Ir al contenido",
+      "cr.m5": "Aguasana · video del patrocinador oficial",
+      "cr.m5s": "Abre con una sola toma de 15 segundos hecha en Google Flow: el corredor bebe, la gota guarda a Granada y la cámara sube a la Catedral. Después, la carrera, los dorsales y la invitación a inscribirse.",
+      "cr.m6": "Vuelo 3D sobre el terreno real · prueba",
+      "cr.m6s": "Hecho en Blender con relieve y foto satelital reales, y la ruta trazada con el GPS de las tomas. Imagen satelital: Sentinel-2 cloudless de EOX (datos Copernicus).",
+      "cr.ai9": "Aperturas de cine en una sola toma: 15 segundos seguidos, de un trago de agua a la Catedral de Granada.",
+      "cr.ai10": "Escenas 3D sobre el terreno real: relieve y foto satelital, nubes volumétricas y la ruta trazada con GPS, renderizadas en Cycles.",
+      "cr.ai11": "Escalado con IA que lleva los clips generados a 1080 × 1920 nítidos antes de editar.",
+      "cr.ai12": "Música con licencia, efectos de sonido en cada corte y música original compuesta en código cuando tiene que calzar exacto con el montaje.",
+      "cr.fk5": "aprobados por el cliente",
       "cr.v1": "De juguete a real",
       "cr.v1s": "Video insignia · un cuadraciclo de juguete se arma en el aire y aterriza convertido en el real",
       "cr.v2": "Video épico del tour",
@@ -1099,11 +1120,11 @@
       "cr.ai6": "Fondos generados a resolución de imprenta para un mural de podio de 4 metros.",
       "cr.ai7": "La línea de producción: el portal del cliente, captions, calendario de publicación y renders en dos tamaños.",
       "cr.ai8": "Acabado: retoque, composición y archivos listos para imprenta.",
-      "cr.p": "Las operaciones me enseñaron a entregar a tiempo, siempre. Este año puse esa disciplina detrás del contenido: armo la idea, dirijo las tomas con IA, edito, escribo el caption y le entrego al cliente un portal donde todo está listo para publicar. Trece videos para un cliente en siete días, 385K vistas en nuestros propios reels y un mural de patrocinadores de cuatro metros para una carrera en un volcán. Este es el trabajo.",
+      "cr.p": "Las operaciones me enseñaron a entregar a tiempo, siempre. Este año puse esa disciplina detrás del contenido: armo la idea, dirijo las tomas con IA, edito, escribo el caption y le entrego al cliente un portal donde todo está listo para publicar. Trece videos para un cliente en siete días, todos aprobados, 385K vistas en nuestros propios reels y un mural de patrocinadores de cuatro metros para una carrera en un volcán. Este es el trabajo.",
       "cr.s1": "videos producidos, de la idea al corte final",
       "cr.s2": "vistas en 12 reels de Xolo Run en cinco semanas",
       "cr.s3": "días para entregar una campaña de 13 videos",
-      "cr.s4": "marcas de turismo, eventos deportivos y comida",
+      "cr.s4": "marcas de turismo, eventos deportivos, comida y bebidas",
       "cr.n1": "Video",
       "cr.n2": "Estudio de IA",
       "cr.n3": "Diseño",
@@ -1112,12 +1133,12 @@
       "cr.c1p": "Pensado primero en vertical, para TikTok, Reels y Shorts. Cada pieza tiene una idea, un gancho en los primeros segundos y una forma clara de reservar.",
       "cr.fh": "Un tour en cuadraciclo, 13 videos y un portal para el cliente, en siete días.",
       "cr.fp1": "El dueño de ATV Extreme Adventure me mandó unas notas de voz por WhatsApp: quería que la gente dejara de scrollear y reservara un tour. Le respondí con una campaña, no con un video. Trece piezas verticales, cada una con su propio gancho: un juguete que se vuelve el cuadraciclo real, un nivel de videojuego, un roadbook de rally que se abre sobre la mesa, una persecución hasta el río, una bajada desde el satélite hasta el volcán Mombacho. Cada ruta, distancia y horario en pantalla sale de sus datos reales, hasta el GPS de las tomas.",
-      "cr.fp2": "No recibe archivos sueltos en un chat. Recibe un portal con su marca donde cada video trae el original en alta calidad, una versión liviana para WhatsApp, el caption con hashtags, la portada y su día en el calendario de publicación. Revisa, aprueba y publica desde el teléfono.",
+      "cr.fp2": "No recibe archivos sueltos en un chat. Recibe un portal con su marca donde cada video trae el original en alta calidad, una versión liviana para WhatsApp, el caption con hashtags, la portada y su día en el calendario de publicación. Revisa, aprueba y publica desde el teléfono. Aprobó los trece.",
       "cr.rh": "La campaña completa de ATV",
       "cr.rhint": "Pasá el cursor para ver un adelanto · clic para verlo con sonido · en español, para el mercado local",
       "cr.mh": "Más trabajo de motion",
       "cr.c2": "Un estudio de IA, manejado como una operación",
-      "cr.c2p": "La IA me da velocidad; el criterio decide qué sale. Cada herramienta tiene un trabajo en la línea de producción, cada toma se elige a mano y cada dato en pantalla se verifica con la información real del cliente antes de publicarse.",
+      "cr.c2p": "La IA me da velocidad; el criterio decide qué sale. Doce herramientas, cada una con un trabajo en la línea de producción, cada toma se elige a mano y cada dato en pantalla se verifica con la información real del cliente antes de publicarse.",
       "cr.c3": "Campañas que se ven desde la línea de salida",
       "cr.c3p": "Sistemas visuales completos para carreras en Nicaragua: posts de lanzamiento y cierre, anuncios de premios, dorsales, la camiseta oficial, una cuenta regresiva en historias, co-marketing con otras carreras y un mural de podio de cuatro metros para 13 patrocinadores. Además, la marca Xolo Run, hecha desde cero.",
       "cr.c4": "Primero la estrategia, después los números",
@@ -1134,7 +1155,7 @@
       "cr.ct": "Las ideas sobran. Sacarlas cada semana, con la marca y a tiempo, es el trabajo.",
       "cr.ctp": "Eso es lo que aporto: ojo creativo con disciplina de operaciones, en inglés y en español.",
       "hero.newk": "Nuevo",
-      "hero.new": "Estudio de contenido: 17 videos, campañas y producción con IA",
+      "hero.new": "Estudio de contenido: 18 videos, campañas y producción con IA",
       "nav.cr": "Contenido",
       "map.cr": "Estudio de contenido",
       "cr.k": "Estudio de contenido · 2026",
