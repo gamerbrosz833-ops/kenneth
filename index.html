@@ -1447,6 +1447,15 @@
       var tabs = [].slice.call(document.querySelectorAll(".cr-tabs a")), chs = tabs.map(function (a) { return document.querySelector(a.getAttribute("href")); });
       function markTabs() { var c = -1; chs.forEach(function (s, i) { if (s.getBoundingClientRect().top < innerHeight * .5) c = i; }); tabs.forEach(function (a, i) { a.classList.toggle("on", i === c); }); }
       addEventListener("scroll", markTabs, { passive: true }); markTabs();
+      // a shared link like /#creative lands on its section once the intro loader is gone
+      if (location.hash.length > 1) {
+        var hashT = null; try { hashT = document.querySelector(location.hash); } catch (e) {}
+        if (hashT) {
+          if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+          var goHash = function () { hashT.scrollIntoView({ behavior: "instant", block: "start" }); };
+          addEventListener("load", function () { setTimeout(goHash, reduce ? 50 : 1500); setTimeout(goHash, reduce ? 400 : 2300); });
+        }
+      }
       // safety net: after a long jump (hero link, tabs, filters) reveal anything on screen that the scroll animation skipped
       if ("IntersectionObserver" in window) {
         var safe = new IntersectionObserver(function (es) {
